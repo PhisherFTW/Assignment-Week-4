@@ -4,16 +4,18 @@ function computerPlay (computerSelection) {
   let gamechoices = ["rock","paper","scissors"];
   return computerSelection = gamechoices[Math.floor(Math.random() * gamechoices.length)];
 }
-
+let computerChoice = null;
 
 const rock1 = document.getElementById('rock').addEventListener("click", rock);
 const paper1 = document.getElementById('paper').addEventListener("click", paper);
 const scissors1 = document.getElementById('scissors').addEventListener("click", scissors);
 
-computerChoice = computerPlay(computerSelection)
+debugger
+
 console.log(computerChoice)
 function rock (playerSelection,computerChoice) {
     // alert("The player chose rock")
+    computerChoice = computerPlay(computerSelection);
     playerSelection = "rock"
     if (playerSelection === computerChoice) {
         console.log("It was a tie!");
@@ -27,9 +29,11 @@ function rock (playerSelection,computerChoice) {
         console.log("You won!, Rock beats Scissors!");
         //playerScore = playerScore+1;
     }
+    alert("Player chose rock")
 }
 function paper (computerChoice) {
     // alert("The player chose paper");
+    computerChoice = computerPlay(computerSelection);
     playerSelection = "paper"
     if (playerSelection === computerChoice) {
         console.log("It was a tie!");
@@ -43,9 +47,11 @@ function paper (computerChoice) {
         console.log("You won!, Paper beats Rock!");
         //playerScore = playerScore+1;
     }
+    alert("Player chose paper");
 }
 function scissors (computerChoice) {
     // alert("The player chose scissors");
+    computerChoice = computerPlay(computerSelection);
     playerSelection = "scissors"
     if (playerSelection === computerChoice) {
         console.log("It was a tie!");
@@ -59,6 +65,7 @@ function scissors (computerChoice) {
         console.log("You won!, Scissors beats paper!");
         //playerScore = playerScore+1;
     }
+    alert("Player chose scissors")
 }
 
 
